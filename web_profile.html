@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Saya</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        header {
+            background-image: url(english2.jpg);
+            color: white;
+            padding: 10px 0;
+        }
+        @keyframes slideDown {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+           
+           
+        }
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+            transition: transform 1s;
+        }
+        .logo img:hover {
+            transform: rotate(360deg) scale(1.1);
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+            background-color: rgb(242, 246, 247);
+            margin: 0;
+            overflow: hidden;
+        }
+        nav ul li {
+            display: inline-block;
+            position: relative;
+        }
+        nav ul li a {
+            display: block;
+            color: rgb(14, 13, 13);
+            padding: 10px 20px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: rgb(212, 218, 219);
+            transform: scale(1.1);
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgb(153, 248, 44);
+            min-width: 160px;
+            z-index: 1;
+            transition: opacity 0.5s ease-in-out;
+            
+        }
+        .dropdown-content a {
+            display: block;
+            text-align: left;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+            opacity: 1;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        h1 {
+         text-align: center;
+         font-size: 3rem;
+         font-weight: bold;
+        background: linear-gradient(45deg, #111110, #eeeeee);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 4px 4px 10px rgb(218, 214, 214);
+        border-radius: 20px;
+        padding: 10px;
+        animation: glow 1.5s infinite alternate;
+        }
+
+        @keyframes glow {
+                  from { text-shadow: 0 0 10px rgba(0, 0, 0, 0.8); }
+                     to { text-shadow: 0 0 20px rgb(129, 129, 129); }
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid rgb(172, 222, 245);
+            text-align: left;
+            transition: background 0.3s;
+        }
+        th {
+            background-color: #5edfff;
+            color: rgb(3, 3, 3);
+        }
+        tr:nth-child(even) {
+            background-color: #fd0b0b;
+        }
+        tr:hover {
+            background-color: #00f8f8;
+            transform: scale(1.02);
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgb(217, 247, 239);
+        }
+        ul li a:hover{
+            color: #f8000c;
+        }
+
+        /* Mengatur li agar tampil horizontal */
+        h2 {
+            float: left;
+        }
+
+        /* Style untuk link dalam navigasi */
+        h2 a {
+            display: block;
+            color: blueviolet;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-family: "algerian";
+            
+        }
+
+        /* Efek hover pada link */
+        h2 a:hover {
+            background-color: rgb(217, 245, 247);
+            color: red;
+        }
+        h3{
+            position: left;
+    top: 50px;
+    left: 10px;
+        }
+        p{
+            font-family: "algerian";
+            font-size: 16pt;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .navbar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .navbar img {
+            width: 24px;
+            height: 24px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img style=" border-radius: 50%; width: 150px; height: 120px; margin: 20px;" src="e4_II.png" alt="Logo" >
+            <h1>E4 (Easy Easy Easy English)</h1>
+        </div>
+        <nav>
+            <ul>
+                <ul>
+                    <li><a href="beranda.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="about.html"><i class="fas fa-user"></i> About Me</a></li>
+                    <li><a href="kontak.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="dropdown-content">
+                <a style="color: black;" href="#project1">SUB BAB 1</a>
+            </div>
+                <h2 class="dropdown">
+                    
+                    <a href="#projects" class="dropbtn">BAB 1</a>
+                    <a href="#projects" class="dropbtn">BAB 2</a>
+                    <a href="#projects" class="dropbtn">BAB 3</a>
+                    <a href="#projects" class="dropbtn">BAB 4</a>
+                    <a href="#projects" class="dropbtn">BAB 5</a>
+                    <a href="#projects" class="dropbtn">BAB 6</a>
+                    <a href="#projects" class="dropbtn">BAB 7</a>
+                    <a href="#projects" class="dropbtn">BAB 8</a>
+                    <a href="#projects" class="dropbtn">BAB 9</a>
+                    <a href="#projects" class="dropbtn">BAB 10</a>
+                   
+                </h2>
+            </ul>
+        
+       
+    </header>
+    <main>
+        <section id="home">
+            <h3>Welcome To E4(easy easy easy english)</h3><br><br><br>
+            <p><dd> Namanya juga #EasyEnglish, tentunya membuat English jadi easy! <br><br>
+<dd>#EasyEnglish adalah buku paling tepat jika kamu ingin menambah kemampuan berbahasa Inggris! Mau </dd> bisa 
+ngobrol dan nanya pakai bahasa Inggris, mau tahu bedanya dialek British-American, mau pidato atau ngelamar kerjaan
+ pakai bahasa Inggris, semua bisa kamu pelajari di buku ini. Nggak perlu pakai pusing karena semua sudah dibikin
+  easy-ringkas-jelas-padat-dan-tidak membosankan. <br><br><br>
+
+#EasyEnglish akan membuatmu: <br>
+• Menggunakan tenses dengan tepat saat berbicara. <br>
+• Jadi tahu bedanya “sometime”, “sometimes” and “some time”! <br>
+• Mengenal comparison, modal, adjective clause, pronoun, dan gerund lebih dekat dan lebih akrab. <br>
+• Tambah pintar menggunakan “will” atau “going to” dalam kalimat yang tepat. <br>
+• Nggak bakal grogi lagi saat harus pidato atau wawancara pakai bahasa Inggris. <br>
+Dan, masih banyak lagi materi yang akan meningkatkan kemampuan bahasa Inggris-mu! <br><br>
+So, think English, think easy! (/´?`)/  <br>
+                
+                Aljabar abstrak mengkaji struktur aljabar, yang terdiri dari himpunan dari objek matematika bersama dengan 
+                satu atau beberapa operasi yang didefinisikan pada himpunan itu. Aljabar abstrak adalah bentuk umum aljabar 
+                elementer dan aljabar linear, karena kajiannya memungkinkan objek matematika selain daripada bilangan dan 
+                operasi-operasi yang bukan aritmetika. Aljabar abstrak membedakan jenis-jenis struktur aljabar seperti grup, 
+                gelanggang, dan lapangan, berdasarkan jumlah operasi yang digunakan serta hukum yang diikuti, yang disebut
+                 aksioma. Aljabar universal dan teori kategori menyediakan kerangka yang lebih umum untuk mempelajari 
+                 pola-pola abstrak yang mencirikan kelas struktur aljabar yang berbeda.
+                
+                Metode aljabar pertama kali dikaji pada zaman kuno untuk menyelesaikan permasalahan spesifik dalam cabang 
+                matematika lain seperti geometri. Beberapa matematikawan kemudian menguji teknik-teknik umum untuk memecahkan
+                 permasalahan sendiri dari penerapan spesifiknya. Pada kala itu, matematikawan menjelaskan persamaan dan solusi
+                  menggunakan kata dan singkatan hingga adanya simbol-simbol formal yang dikembangkan pada abad ke-16 dan ke-17. 
+                  Pada abad pertengahan ke-19, jangkauan konsep aljabar meluas yang melalui teori persamaan, yang meliputi
+                   jenis-jenis operasi dan struktur aljabar yang beragam. Selain geometri, aljabar berkaitan dengan banyak 
+                   cabang matematika seperti topologi, teori bilangan, dan kalkulus, and serta cabang-cabang lain seperti 
+                   logika dan ilmu empiris..</dd></p><br>
+        </section>
+       
+       
+        <section id="contact">
+            <h1>Daftar Sub Bab</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Judul Sub Bab</th>
+                        <th>Deskripsi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Pengenalan Aljabar</td>
+                        <td>Memahami dasar-dasar aljabar dan konsep-konsep fundamental.</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Operasi Dasar</td>
+                        <td>Belajar tentang penjumlahan, pengurangan, perkalian, dan pembagian dalam aljabar.</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Persamaan Linear</td>
+                        <td>Menyelesaikan persamaan linear satu variabel dan sistem persamaan linear.</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Inequality</td>
+                        <td>Memahami dan memecahkan pertidaksamaan dalam aljabar.</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Fungsi dan Grafik</td>
+                        <td>Memperkenalkan konsep fungsi dan cara menggambarnya.</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Polinomial</td>
+                        <td>Belajar tentang polinomial dan operasi yang terkait.</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Faktorisasi</td>
+                        <td>Teknik-teknik untuk memfaktorkan ekspresi aljabar.</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Persamaan Kuadrat</td>
+                        <td>Menyelesaikan dan memahami sifat-sifat persamaan kuadrat.</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Logaritma</td>
+                        <td>Pengenalan logaritma dan aplikasinya dalam aljabar.</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Barisan dan Deret</td>
+                        <td>Memahami konsep barisan, deret, dan aplikasinya.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <div class="navbar">
+        <a href="wa.html">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
+            WhatsApp
+        </a>
+        <a href="email.html">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Email Icon">
+            Email
+        </a>
+        <a href="telpon.html">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Phone_icon.png" alt="Phone Icon">
+            Telepon
+        </a>
+    </div>
+    
+    
+</body>
+</html>
